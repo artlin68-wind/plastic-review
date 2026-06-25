@@ -1,0 +1,123 @@
+materials:
+  ABS:
+    wall_thickness:
+      min: 1.5
+      max: 3.5
+      warning_min: 1.2
+      warning_max: 4.5
+      thickness_ratio_pass: 2.0
+      thickness_ratio_warn: 3.0
+    draft_angle:
+      exterior_min: 1.0
+      interior_min: 0.5
+      warning_min: 0.2
+    fillet:
+      min_radius: 0.5
+      warning_radius: 0.3
+    description: "ABS 丙烯腈丁二烯苯乙烯"
+
+  PC:
+    wall_thickness:
+      min: 1.5
+      max: 4.0
+      warning_min: 1.2
+      warning_max: 5.0
+      thickness_ratio_pass: 2.0
+      thickness_ratio_warn: 3.0
+    draft_angle:
+      exterior_min: 1.5
+      interior_min: 0.75
+      warning_min: 0.5
+    fillet:
+      min_radius: 0.5
+      warning_radius: 0.3
+    description: "PC 聚碳酸酯"
+
+  PP:
+    wall_thickness:
+      min: 1.0
+      max: 3.8
+      warning_min: 0.8
+      warning_max: 5.0
+      thickness_ratio_pass: 2.0
+      thickness_ratio_warn: 3.0
+    draft_angle:
+      exterior_min: 1.0
+      interior_min: 0.5
+      warning_min: 0.25
+    fillet:
+      min_radius: 0.5
+      warning_radius: 0.3
+    description: "PP 聚丙烯"
+
+  PA66:
+    wall_thickness:
+      min: 1.0
+      max: 3.5
+      warning_min: 0.8
+      warning_max: 4.5
+      thickness_ratio_pass: 2.0
+      thickness_ratio_warn: 3.0
+    draft_angle:
+      exterior_min: 0.5
+      interior_min: 0.25
+      warning_min: 0.1
+    fillet:
+      min_radius: 0.5
+      warning_radius: 0.3
+    description: "PA66 尼龍66"
+
+  POM:
+    wall_thickness:
+      min: 1.2
+      max: 3.5
+      warning_min: 1.0
+      warning_max: 4.5
+      thickness_ratio_pass: 2.0
+      thickness_ratio_warn: 3.0
+    draft_angle:
+      exterior_min: 1.0
+      interior_min: 0.5
+      warning_min: 0.25
+    fillet:
+      min_radius: 0.5
+      warning_radius: 0.3
+    description: "POM 聚甲醛"
+
+  PC+ABS:
+    wall_thickness:
+      min: 1.5
+      max: 3.5
+      warning_min: 1.2
+      warning_max: 4.5
+      thickness_ratio_pass: 2.0
+      thickness_ratio_warn: 3.0
+    draft_angle:
+      exterior_min: 1.0
+      interior_min: 0.5
+      warning_min: 0.2
+    fillet:
+      min_radius: 0.5
+      warning_radius: 0.3
+    description: "PC+ABS 合金"
+
+rib_design:
+  thickness_ratio_pass: 0.6
+  thickness_ratio_warn: 0.7
+  height_ratio_pass: 3.0
+  height_ratio_warn: 4.0
+
+boss_design:
+  outer_inner_ratio_pass: 2.0
+  outer_inner_ratio_warn: 1.7
+
+undercut:
+  area_ratio_warning: 0.05
+
+hole_direction:
+  angle_pass_deg: 5.0
+  angle_warn_deg: 15.0
+
+ejection:
+  area_ratio_pass: 0.30
+  area_ratio_warn: 0.20
