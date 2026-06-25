@@ -1,0 +1,13 @@
+﻿version: '3.8'
+
+services:
+  plastic-review:
+    build: .
+    container_name: plastic-review
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./uploads:/app/uploads
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
