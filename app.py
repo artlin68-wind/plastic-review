@@ -24,11 +24,17 @@ st.markdown("""
 # ===== 功能函數 =====
 
 def _render_fig_to_png(fig, width=800, height=450) -> bytes | None:
-    """將 Plotly figure 轉成 PNG bytes，失敗時回傳 None。"""
+    """將 Plotly figure 轉成 PNG bytes，失敗時回傳 None。
+    相容 kaleido 0.2.x（Streamlit Cloud）與 1.x（本機）。
+    """
     try:
-        return fig.to_image(format='png', width=width, height=height, scale=1.5)
+        import plotly.io as pio
+        return pio.to_image(fig, format='png', width=width, height=height, scale=1.5)
     except Exception:
-        return None
+        try:
+            return fig.to_image(format='png', width=width, height=height)
+        except Exception:
+            return None
 
 
 def _build_figures(results: dict, mesh_data: dict) -> dict:
