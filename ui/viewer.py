@@ -168,7 +168,7 @@ def render_points_overlay(mesh_data: dict, points: np.ndarray,
                 showscale=point_values is not None,
                 colorbar=dict(title='mm', x=1.1) if point_values is not None else None,
             ),
-            name='取樣點',
+            name='Sample Points',
         )
         fig.add_trace(scatter)
 
@@ -188,7 +188,7 @@ def render_direction_radar(scores: dict) -> go.Figure:
         fill='toself',
         line=dict(color='#00d2ff'),
         fillcolor='rgba(0, 210, 255, 0.3)',
-        name='可脫模比例 (%)',
+        name='Demoldable Area (%)',
     ))
 
     fig.update_layout(
@@ -198,7 +198,7 @@ def render_direction_radar(scores: dict) -> go.Figure:
         ),
         paper_bgcolor='#0f3460',
         font=dict(color='white'),
-        title='各方向可脫模比例',
+        title='Demoldable Area by Direction (%)',
         height=400,
     )
     return fig
